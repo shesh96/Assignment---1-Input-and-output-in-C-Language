@@ -1,0 +1,188 @@
+//Q1.
+#include<stdio.h>
+int main(){
+    int x;
+    printf("enter the number");
+    scanf("%d",&x);
+    printf("unit digit of %d is %d",x,x%10);
+    printf("\n");
+    return 0;
+}
+//Q2.
+#include<stdio.h>
+int main(){
+    int x;
+    printf("enter the number");
+    scanf("%d",&x);
+    printf("number without last digit is %d",x/10);;
+    printf("\n");
+    return 0;
+}
+//Q3.Swap two values
+#include<stdio.h>
+int main(){
+    int a,b,c;
+    printf("enter two number:");
+    scanf("%d %d",&a,&b);
+    printf("a=%d b=%d",a,b);
+    c=a;
+    a=b;
+    b=c;
+    printf("\na=%d b=%d",a,b);
+    return 0;
+}
+//Q4 swap two values without third variable
+#include<stdio.h>  
+ int main()    
+{  
+    int a,b;
+    printf("enter two number:");
+    scanf("%d%d",&a,&b); 
+     
+    printf("Before swap a=%d b=%d",a,b);      
+    a=a+b;    
+    b=a-b;    
+    a=a-b;    
+    printf("\nAfter swap a=%d b=%d",a,b);
+       
+   return 0;  
+}
+//Q5 
+#include<stdio.h>
+   int main()
+  {  int x,r,sum=0;
+  printf("Enter a number");
+  scanf("%d",&x);
+  while (x!=0){
+  r=x%10;
+  sum=sum+r;
+  x=x/10;
+  
+  }
+  printf("Sum of digit is %d",sum);
+  
+    printf("\n");
+     return 0;
+
+ }
+
+//Q6 Print ASCII CODE
+#include<stdio.h>
+int main(){
+    char ch;
+    printf("enter any charactor value:");
+    scanf("%c",&ch);
+    printf("%d",ch);
+    printf("\n");
+    return 0;
+    
+}
+  //Q7
+ #include<stdio.h>
+  int main(){
+    int x=8,count=0;
+    int result=0;
+    while (x!=0)
+    {
+      result=x&1;
+      count++;
+      if (result==1)
+      {
+         printf("%d",count);
+         break;
+      }
+      x=x>>1;
+      
+    }
+    
+    printf("\n");
+    return 0;
+    
+}
+    
+//Q8
+#include<stdio.h>
+int main(){
+    int x;
+    printf("enter a number:");
+    scanf("%d",&x);
+    int result=x&1;
+    if (result==1)
+     printf("odd");
+     else
+     printf("even");
+   
+    printf("\n");
+    return 0;
+    
+}
+//Q9.
+#include<stdio.h>
+int main(){
+    int ;
+    float;
+    char;
+    double;
+    printf("\n size of int:%d",sizeof(int));
+    printf("\n size of float:%d",sizeof(float));
+    printf("\n size of char:%d",sizeof(char));
+    printf("\n size of double:%d",sizeof(double));
+    printf("\n");
+    return 0;
+    
+}
+  //Q10.
+#include<stdio.h>
+int main(){
+    int x;
+    printf("enter a number:");
+    scanf("%d",&x);
+    x=x/10;
+    printf("new number is %d",x*10);
+    
+    printf("\n");
+    return 0;
+    
+}
+//Q11.
+#include<stdio.h>
+int main(){
+     int x,n;
+      printf("enter two number:");
+      scanf("%d%d",&x,&n);
+      x=x*10;
+      x=x+n;
+      printf("resulting number is %d",x);
+    printf("\n");
+    return 0;
+    
+}
+//Q12.
+#include<stdio.h>
+int main(){
+     float n,d=1/(76.23);
+    printf("enter amout in INR:");
+    scanf("%f",&n);
+    printf("Amount in USD is %f",d*n);
+    
+    printf("\n");
+    return 0;
+    
+}
+
+//Q13.
+#include<stdio.h>
+int main(){
+     int x,n,m;
+       printf("enter a number:");
+      scanf("%d",&x);
+      n=x/10;
+      m=x%10;
+      x=(m*100+n);
+      printf("resulting number is%d",x);
+
+     printf("\n");
+ return 0;
+    
+}
+
