@@ -1,0 +1,333 @@
+//Q1. Write a program which takes the month number as an input and display number of days in that month.
+ #include<stdio.h>
+ int main(){
+     int n;
+     printf("Enter a month number ");
+     scanf("%d",&n);
+     switch (n)
+     {
+     case 1:
+         printf("31 days");
+         break;
+     case 2:
+         printf("29 days");
+         break;
+     case 3:
+         printf("31 days");
+         break;
+     case 4:
+         printf("30 days");
+         break;
+     case 5:
+         printf("31 days");
+         break;
+     case 6:
+         printf("30 days");
+         break;
+     case 7:
+         printf("31 days");
+         break;
+     case 8:
+         printf("31 days");
+         break;
+     case 9:
+         printf("30 days");
+         break;
+     case 10:
+         printf("31 days");
+         break;
+     case 11:
+         printf("30 days");
+         break;
+     case 12:
+         printf("31 days");
+         break;
+
+    default:
+      printf("Invailid key");
+        break;
+    }
+    return 0;
+}
+
+//Q2. Write a menu driven program with the following options:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Exit
+
+#include <stdio.h>
+int main()
+{
+    int n, a, b;
+    while (1)
+    {
+        printf("\n1. Addition ");
+        printf("\n2. Subtraction ");
+        printf("\n3. Multiplication ");
+        printf("\n4. Division ");
+        printf("\n5. Exit ");
+
+        printf("\n\n Enter your choice ");
+        scanf("%d", &n);
+        switch (n)
+        {
+        case 1:
+            printf("enter two number ");
+            scanf("%d%d", &a, &b);
+            printf("sum is %d", a + b);
+            break;
+        case 2:
+            printf("enter two number ");
+            scanf("%d%d", &a, &b);
+            printf("subtraction is %d", a - b);
+            break;
+        case 3:
+            printf("enter two number ");
+            scanf("%d%d", &a, &b);
+            printf("multiplication is %d", a * b);
+            break;
+        case 5:
+            break;
+        default:
+            printf("Invalid choice");
+        }
+        if (n == 5)
+            break;
+    }
+    printf("\n");
+    return 0;
+}
+
+//Q3. Write a program which takes the day number of a week and displays a unique greeting message for the day.
+ #include<stdio.h>
+ int main(){
+     int day;
+     printf("Enter a number ");
+     scanf("%d",&day);
+     switch (day)
+     {
+     case 1:
+         printf("Today is Monday");
+         break;
+     case 2:
+         printf("Today is Tuesday");
+         break;
+     case 3:
+         printf("Today is Wednesday");
+         break;
+     case 4:
+         printf("Today is Thusday");
+         break;
+     case 5:
+         printf("Today is Friday");
+         break;
+     case 6:
+         printf("Today is Saturday");
+         break;
+     case 7:
+         printf("Today is Sunday");
+         break;
+
+    default:
+       printf("Invalid key");
+        break;
+    }
+    return 0;
+}
+
+//Q4. Write a menu driven program with the following options:
+//a. Check whether a given set of three numbers are lengths of an isosceles triangle or not
+// b. Check whether a given set of three numbers are lengths of sides of
+// a right angled triangle or not
+ //c. Check whether a given set of three numbers are equilateral triangle or not
+ //d. Exit
+
+#include <stdio.h>
+int main()
+{
+    int choice, a, b, c;
+    while (1)
+    {
+        printf("\n\n**************************************************");
+        printf("\n\n1. To check Isosceles tringle  ");
+        printf("\n2. To check Right angle tringle  ");
+        printf("\n3. To check Equilateral tringle  ");
+        printf("\n4. Exit  ");
+        printf("\n\n Enter your choice  ");
+        scanf("%d", &choice);
+        switch (choice)
+        {
+        case 1:
+            printf("\nEnter length of 3 sides of tringle ");
+            scanf("%d%d%d", &a, &b, &c);
+            if ((a == b) || (b == c) || (c == a))
+                printf("Isosceles Tringle ");
+            else
+                printf("Not Isosceles Tringle ");
+            break;
+        case 2:
+            printf("\nEnter length of 3 sides of tringle ");
+            scanf("%d%d%d", &a, &b, &c);
+            if ((a * a == b * b + c * c) || (b * b == a * a + c * c) || (c * c == b * b + a * a))
+                printf("Right angle Tringle ");
+            else
+                printf("Not Right angle Tringle ");
+            break;
+        case 3:
+            printf("\nEnter length of 3 sides of tringle ");
+            scanf("%d%d%d", &a, &b, &c);
+            if ((a == b) && (b == c) && (c == a))
+                printf("Equilateral Tringle ");
+            else
+                printf("Not Euilateral Tringle ");
+            break;
+        case 4:
+         break;
+
+        default:
+            printf("Invalid key");
+            break;
+        }
+        if(choice==4)
+        break;
+    }
+    printf("\n");
+    return 0;
+}
+
+//Q5. Convert the following if-else-if construct into switch case:
+//if(var == 1)
+//System.out.println("good");
+//else if(var == 2)
+//System.out.println("better");
+//else if(var == 3)
+//System.out.println("best");
+//else
+//System.out.println("invalid");
+
+#include <stdio.h>
+int main()
+{
+    int year;
+    printf("Enter a year ");
+    scanf("%d", &year);
+    switch (year % 100==0)
+    {
+    case 1:switch (year % 400==0)
+        {
+          case 1:printf("leap year");  break;
+           case 0: printf("non leap year");break;
+        }break;
+        ;
+
+    case 0:switch (year % 4==0)
+        {
+        case 1:printf("leap year");break;
+        case 0:printf("non leap year");break;
+
+        }
+    }
+    return 0;
+}
+
+//Q7. Program to take the value from the user as input electricity unit charges
+//and calculate total electricity bill according to the given condition . Using
+//the switch statement.
+//For the first 50 units Rs. 0.50/unit
+//For the next 100 units Rs. 0.75/unit
+//For the next 100 units Rs. 1.20/unit
+//For units above 250 Rs. 1.50/unit
+//An additional surcharge of 20% is added to the bill.
+
+#include <stdio.h>
+int main()
+{
+    float x ,amount=0,total=0;
+    printf("Enter electrcity units  ");
+    scanf("%f", &x);
+    switch(x<=50){
+        case 1:amount= x*0.5;
+        break;
+        case 0:switch(x<=150){
+            case 1:amount=25+(x-50)*0.75;
+            break;
+            case 0:switch(x<=250){
+                case 1:amount=100+(x-150)*1.2;
+                break;
+                case 0: amount=220+(x-250)*1.5;
+                break;
+            }break;
+        }break;    
+                 
+
+    }
+    total=amount+amount*0.20;
+    printf("Total amount is %f",total);
+    
+    return 0;
+}
+
+//Q8. Program to convert a positive number into a negative number and negative
+//number into a positive number using a switch statement.
+
+#include <stdio.h>
+int main()
+{
+    int n;
+    printf("Enter a number ");
+    scanf("%d", &n);
+    switch(n>=0){
+        case 1:printf("%d",-n);
+        break;
+        case 0:printf("%d",-n);
+        break;        
+
+    }
+    
+    return 0;
+}
+
+//Q9. Program to Convert even number into its upper nearest odd number Switch Statement.
+
+#include <stdio.h>
+int main()
+{
+    int n;
+    printf("Enter a number ");
+    scanf("%d", &n);
+    switch(n%2==0){
+        case 1:printf("upper nearest odd number is %d",1+n);
+        break;
+        case 0:printf("upper nearest odd number is %d",n);
+        break;        
+
+    }
+    
+    return 0;
+}
+
+//Q10. C program to find all roots of a quadratic equation using switch case
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+    int a,b,c,d;
+    printf("Enter three number ");
+    scanf("%d%d%d", &a,&b,&c);
+    d=b*b-4*a*c;
+    switch(d>0){
+        case 1:printf(" roots are %f ,%f", (-b+sqrt(d))/(2*a), (-b-sqrt(d))/(2*a));
+        break;
+        case 0:switch(d==0){
+        case 1:printf("both roosts are equal is %f",-b/(2.0*a));
+        break;
+        case 0:
+        printf("imaginary roots ");
+        break;        
+        }break;
+    }   
+    
+    return 0;
+}
